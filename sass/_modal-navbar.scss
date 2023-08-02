@@ -1,0 +1,35 @@
+@use "variables";
+@use "mixins";
+
+
+.modal-navbar{
+   
+    &__background{
+        @include mixins.modal-background;
+    }
+    background-color: variables.$White;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+    width: 250px;
+    height: 100%;
+    padding: 28px 24px;
+   // display: none;
+    &__items{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+        list-style: none;
+    }
+    &__link{
+    text-decoration: none;
+    color: variables.$Very-dark-blue;
+    font-weight: 700;
+    font-size: 1.1em;
+    }
+    &__close-icon{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

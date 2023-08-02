@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+@mixin modal-background{
+    background-color: v.$Black-modal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    z-index: 1;
+}
+
+@mixin image-btn($top, $left){
+    background-color: v.$White;
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: $top;
+        left: $left;
+        &:hover{
+            cursor: pointer;
+        }
+}
